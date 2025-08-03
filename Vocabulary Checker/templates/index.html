@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vocabulary Productivity Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1>Vocabulary Productivity Checker</h1>
+    <form method="post">
+        <label for="sentence">Your sentence:</label><br>
+        <input type="text" id="sentence" name="sentence" required><br><br>
+        <label for="target_word">Target word:</label><br>
+        <input type="text" id="target_word" name="target_word" required><br><br>
+        <label for="expected_pos">Expected part of speech:</label>
+        <select id="expected_pos" name="expected_pos" required>
+            <option value="ADJ">ADJ (Adjective)</option>
+            <option value="ADP">ADP (Adposition)</option>
+            <option value="ADV">ADV (Adverb)</option>
+            <option value="AUX">AUX (Auxiliary verb)</option>
+            <option value="CONJ">CONJ (Conjunction)</option>
+            <option value="CCONJ">CCONJ (Coordinating Conjunction)</option>
+            <option value="DET">DET (Determiner)</option>
+            <option value="INTJ">INTJ (Interjection)</option>
+            <option value="NOUN">NOUN (Noun)</option>
+            <option value="NUM">NUM (Numeral)</option>
+            <option value="PART">PART (Particle)</option>
+            <option value="PRON">PRON (Pronoun)</option>
+            <option value="PROPN">PROPN (Proper Noun)</option>
+            <option value="PUNCT">PUNCT (Punctuation)</option>
+            <option value="SCONJ">SCONJ (Subordinating Conjunction)</option>
+            <option value="SYM">SYM (Symbol)</option>
+            <option value="VERB">VERB (Verb)</option>
+            <option value="X">X (Other)</option>
+        </select><br><br>
+        <button type="submit">Check</button>
+    </form>
+    {% if feedback %}
+        <div id="feedback">{{ feedback | safe }}</div>
+    {% endif %}
+    </div>
+    <a href="https://www.linkedin.com/in/zaria-pittman-506425226/"/>
+    <img type="image/svg+xml" src="static\linkedin.svg" alt="LinkedIn"</img></a>
+</body>
+</html>

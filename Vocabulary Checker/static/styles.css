@@ -1,0 +1,73 @@
+
+html{
+    background: linear-gradient(135deg, #66eae3 0%, #1b0ce6 100%);
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+h1{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+} 
+.container{
+    height: 450px;
+    width: 50%;
+    display: flex;
+    align-content: space-between;
+    font-family: "Libertinus Serif", serif;
+    font-style: italic;
+    font-weight: 300;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 16px;
+    border: none;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 40px;
+}
+
+input[type="text"]{
+    width: 85%;
+    padding: 10px;
+    font-family: "Libertinus Serif", serif;
+    font-size: 14px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 7px;
+}
+button{
+    width: 30%;
+    height: 12%;
+    color: #000000;
+    background-color:#51bcee;
+    font-family: "Libertinus Serif", serif;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+    margin-bottom: 40px;
+    border-radius: 10%;
+    border: 2px solid #96d1ec;
+}
+button:hover {
+    background-color:rgba(85, 128, 145, 0.527);
+}
+#expected_pos{
+    width: 30%;
+    height: 12%;
+    color: #000000;
+    background-color:azure;
+    font-family: "Libertinus Serif", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    border: 2px solid #e1e5e9;
+}
