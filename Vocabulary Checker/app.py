@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification 
 import spacy
 import logging
+import os
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -90,4 +91,7 @@ def generate_feedback(sentence, word, found, pos, pos_ok, grammar):
     return "<br>".join(lines)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    debug = os.getenv('FLASK_DEBUG', 'False').lower() == 'true'
+    host = os.getenv('FLASK_HOST', '0.0.0.0')
+    port = int(os.getenv('FLASK_PORT', 5000))
+    app.run(debug=debug, host=host, port=port)
